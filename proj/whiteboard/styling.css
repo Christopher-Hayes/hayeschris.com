@@ -1,0 +1,114 @@
+* { padding: 0; margin: 0; }
+body {
+    overflow: hidden;
+}
+.board {
+    cursor: crosshair;
+}
+.side {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    top: 0;
+    height: 100vh;
+    width: 70px;
+    padding-left: 10px;
+}
+.tool, .color {
+    width: 100%;
+    height: 50%;
+}
+.tool {
+    margin-top: auto;
+    height: 300px;
+}
+.tool ul, .color ul {
+    list-style: none;
+    width: 70px;
+}
+.tool ul {
+    margin-top: -60px;
+    height: 340px;
+}
+.color ul {
+    margin-top: -20px;
+    padding-top: 10px;
+}
+.color .preset {
+    height: 100%;
+}
+.tool .current:hover + ul li, .tool ul:hover > li {
+    margin-left: 10px;
+}
+.tool .current:hover > .text {
+    width: 100px;
+    opacity: 1;
+    left: 30px;
+}
+.current, .tool ul li, .color ul li {
+    width: 40px;
+    height: 40px;
+    border: 5px solid white;
+    border-radius: 25px;
+    box-shadow: 0 0 30px #b2b2b2;
+    background-color: lightgrey;
+    margin: 10px 0 10px 10px;
+    cursor: pointer;
+}
+.tool ul li:hover, .color ul li:hover {
+    box-shadow: 0 0 300px #b2b2b2;
+    border: none;
+    width: 50px;
+    height: 50px;
+}
+.tool ul li, .color ul li {
+    margin-left: -320px;
+    -webkit-transition: margin-left 400ms ease, box-shadow 400ms;
+    transition: margin-left 400ms ease, box-shadow 400ms;
+}
+.tool .current {
+    position: absolute;
+    top: calc( 50% - 60px );
+}
+.color .current {
+    background-color: black;
+}
+.color .current:hover + .preset li, .color .preset:hover > li {
+    margin-left: 10px;
+}
+.color .current:hover > .text {
+    width: 100px;
+    opacity: 1;
+    left: 60px;
+}
+.text {
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    height: 50px;
+    left: 0;
+    padding-top: 10px;
+    margin: 0;
+    color: grey;
+    text-align: center;
+    font-family: "Century Gothic";
+    user-select: none;
+}
+.tool .preset li, .tool .current {
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #a7a7a7;
+}
+.tool .preset li:nth-child(1) { background-image: url("pen.png"); }
+.tool .preset li:nth-child(2), .tool .current { background-image: url("pencil.png"); }
+.tool .preset li:nth-child(3) { background-image: url("eraser.png"); }
+.tool .preset li:nth-child(4) { background-image: url("text.png"); }
+.tool .preset li:nth-child(5) { background-image: url("clear.png"); }
+.color .preset li:nth-child(1) { background-color: #008066; }
+.color .preset li:nth-child(2) { background-color: #aa0044; }
+.color .preset li:nth-child(3) { background-color: #008000; }
+.color .preset li:nth-child(4) { background-color: #e7511f; }
+.color .preset li:nth-child(5) { background-color: #da2929; }
+.color .preset li:nth-child(6) { background-color: #e3e114; }

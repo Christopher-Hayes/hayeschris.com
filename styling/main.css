@@ -1,0 +1,34 @@
+* { margin:0;padding:0; }
+body {
+    min-height: 100vh;
+    
+    background-color: rgb(40,40,40);
+}
+/* HEADER */
+header {
+    height: 70px;
+    padding: 10px 0 10px 50px;
+    
+    background-color: rgb(20,20,20);
+}
+.fname, .lname {
+    float: left;
+    
+    line-height: 70px;
+    font-size: 32px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.fname {
+    color: white;
+    font-weight: 300;
+}
+.lname {
+    padding-left: 10px;
+    
+    background-color: rgb(20,20,20);
+    color: #cc3305;
+    font-size: 36px;
+    font-weight: 700;
+    overflow: hidden;
+    
+}

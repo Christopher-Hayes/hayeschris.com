@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+}
+body {
+    font-family: "Courier New";
+    font-size: 24px;
+    background-color: rgb(30,30,30);
+    color: white;
+    height: auto;
+    display: block;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+}
+.left-margin {
+    background-color: rgb(40,40,40);
+    position: fixed;
+    width: 20px;
+    height: 100vh;
+}
+.tag {
+    text-decoration: none;
+    margin-left: 32px;
+    display: block;
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    color: inherit;
+}
+.a-hover {
+    background-color: rgb(50,50,50);
+    color: deeppink!important;
+}
+.tag-text {
+    display: block;
+    width: 100%;
+    height: auto;
+    color: inherit;
+    padding: 5px 0;
+    pointer-events: none;
+}
+p {
+    color: inherit;
+}

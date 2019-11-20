@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Whiteboard</title>
+    <link rel="stylesheet" href="styling.css">
+    <script src="main.js"></script>
+</head>
+<body onload="onload()">
+    <canvas class="board" id="board" width="5000px" height="5000px" onmousedown="onMD(event)" onmousemove="onMM(event)" onmouseup="onMU(event)" onmouseout="onMO(event)"></canvas>
+    <div class="side">
+        <div class="tool">
+            <div class="current" id="toolCurrent">
+                <div class="text">Tool</div>
+            </div>
+            <ul class="preset" id="toolPreset">
+                <li onmousedown="setTool( 0 )"></li>
+                <li onmousedown="setTool( 1 )"></li>
+                <li onmousedown="setTool( 2 )"></li>
+                <li onmousedown="setTool( 3 )"></li>
+                <li onmousedown="setTool( 4 )"></li>
+            </ul>
+        </div>
+        <div class="color">
+            <div class="current" id="colorCurrent">
+                <div class="text">Color</div>
+            </div>
+            <ul class="preset" id="colorPreset">
+                <li onmousedown="setColorPreset( 0 )"></li>
+                <li onmousedown="setColorPreset( 1 )"></li>
+                <li onmousedown="setColorPreset( 2 )"></li>
+                <li onmousedown="setColorPreset( 3 )"></li>
+                <li onmousedown="setColorPreset( 4 )"></li>
+                <li onmousedown="setColorPreset( 5 )"></li>
+            </ul>
+            <!--
+            <ul class="recent">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            -->
+        </div>
+    </div>
+</body>
+</html>

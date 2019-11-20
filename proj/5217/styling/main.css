@@ -1,0 +1,24 @@
+#mode {
+  font-size: 36px;
+  font-family: 'Arial';
+  font-style: bold;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+  color: white;
+  transition: background 3s, color 3s;
+}
+#timer {
+  font-size: 48px;
+  font-family: 'Arial';
+  font-style: bold;
+  color: white;
+  text-align: center;
+  width: 100%;
+  transition: background 3s, color 3s;
+}
+body {
+  background-color: #3F51B5;
+  transition: background 3s, color 3s;
+  width: 100%;
+}

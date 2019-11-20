@@ -1,0 +1,50 @@
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="index.css"/>
+    <link type="text/css" rel="stylesheet" href="themeLight.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body onload="loadData()">
+    <div class="header">
+        <div class="course-wrap">
+            <input class="course" type="text" placeholder="Course Name" id="course" onchange="savePage(true)" onkeyup="savePage(true)"/>
+            <div class="course-menu">
+                <ul id="pages">
+                    
+                </ul>
+            </div>
+        </div>
+        <input class="title" type="text" placeholder="Notes Title" id="title" onchange="savePage(true)" onkeyup="savePage(true)"/>
+    </div>
+    <div class="notes_points">
+        <textarea placeholder="Key Points" onchange="savePage(false)" onkeyup="savePage(false)" id="notes_points"></textarea>
+    </div>
+    <div class="notes_body">
+        <textarea placeholder="General Notes" onchange="savePage(false)" onkeyup="savePage(false)" id="notes_body"></textarea>
+    </div>
+    <div class="notes_summary">
+        <textarea placeholder="Summary of Notes" onchange="savePage(false)" onkeyup="savePage(false)" id="notes_sum"></textarea>
+    </div>
+    <div class="font"><p id="font">Palantino</p>
+        <ul class="font-drop">
+            <li style='font-family: Arial' onmousedown='setFont("Arial")'>Arial</li>
+            <li style='font-family: "Arial Black"' onmousedown='setFont("Arial Black")'>Arial Black</li>
+            <li style='font-family: Bookman' onmousedown='setFont("Bookman")'>Bookman</li>
+            <li style='font-family: Courier' onmousedown='setFont("Courier")'>Courier</li>
+            <li style='font-family: "Courier New"' onmousedown='setFont("Courier New")'>Courier New</li>
+            <li style='font-family: Garamond' onmousedown='setFont("Garamond")'>Garamond</li>
+            <li style='font-family: Georgia' onmousedown='setFont("Georgia")'>Georgia</li>
+            <li style='font-family: Helvetica' onmousedown='setFont("Helvetica")'>Helvetica</li>
+            <li style='font-family: Palantino' onmousedown='setFont("Palantino")'>Palantino</li>
+            <li style='font-family: Times New Roman' onmousedown='setFont("Times New Roman")'>Times New Roman</li>
+            <li style='font-family: Trebuchet' onmousedown='setFont("Trebuchet")'>Trebuchet</li>
+            <li style='font-family: Verdana' onmousedown='setFont("Verdana")'>Verdana</li>
+        </ul>
+    </div>
+    <div class="theme" onmousedown="changeTheme()">
+        <div class="slider" id="slider">Light</div>
+    </div>
+    <div class="new" onmousedown="newPage()">+</div>
+    <div class="clearAnim" id="clearAnim"></div>
+</body>

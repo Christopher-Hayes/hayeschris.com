@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>FSM</title>
+    <script src="pixi.min.js"></script>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <script src="classes.js"></script>
+    <script src="main.js"></script>
+    <ul id="topBar">
+        <li><h2 class="noselect">Text: </h2></li>
+        <li><textarea id="mainText" onchange="textUpdate()" onkeyup="textUpdate()">State</textarea></li>
+        <li><h2 class="noselect">Sub Text: </h2></li>
+        <li><textarea id="subText" onchange="textUpdate()" onkeyup="textUpdate()">content</textarea></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Palatino;
+    font-size: 14px;
+}
+html {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(70,70,70);
+    overflow: hidden;
+}
+input[type=text], textarea {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    resize: none;
+    padding: 20px 10px 0 30px;
+}
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(50,50,50);
+}
+.header .course-wrap {
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+.header .course-wrap .course {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    text-align: center;
+}
+.header .course-wrap:hover > .course-menu {
+    display: block;
+}
+.header .course-menu {
+    position: absolute;
+    display: none;
+    width: calc(25vw - 20px);
+    height: calc(100vh - 90px);
+    background-color: rgb(40,40,40);
+    z-index: 5;
+    color: white;
+    padding: 20px 10px;
+}
+.header .course-manu .pages {
+    list-style: none;
+}
+.header .course-menu .course-name {
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    list-style: none;
+}
+.header .course-menu .course-page {
+    display: block;
+    width: calc(100% - 30px);
+    list-style: none;
+    cursor: pointer;
+    padding: 15px 0 15px 20px;
+    border-bottom: 1px solid grey;
+    float: left;
+}
+.header .course-menu .course-page:hover {
+    background-color: rgb(30,30,30);
+}
+.header .course-menu .course-page .page-remove {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    line-height: 18px;
+    margin-right: 20px;
+    float: left;
+    text-align: center;
+    background-color: rgba(255,0,0,0.3);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 300ms, color 300ms;
+}
+.header .course-menu .course-page .page-remove:hover {
+    background-color: rgba(255,0,0,0.6);
+    color: white !important;
+}
+.header .course-menu .course-page h4 {
+    float: left;
+    pointer-events: none;
+}
+.header .title {
+    width: 50%;
+    height: 100%;
+    font-size: 36px;
+    text-align: center;
+    margin-top: -5px;
+}
+.notes_points {
+    width: 25%;
+    height: calc(100vh - 50px);
+    background-color: rgb(60,60,60);
+    float: left;
+}
+.notes_points textarea {
+    position: absolute;
+    width: 25%;
+    height: calc(100% - 50px);
+    z-index: 2;
+    
+}
+.notes_body {
+    background-color: rgb(80,80,80);
+    width: 75vw;
+    height: calc(100vh - 200px);
+    margin-left: 25vw;
+}
+.notes_body textarea {
+    width: 75vw;
+    height: calc(100vh - 200px);
+}
+.notes_summary {
+    
+}
+.notes_summary textarea {
+    width: 75vw;
+    height: 150px;
+}
+.theme {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(40,40,40);
+    box-shadow: inset 0 0 10px rgb(10,10,10);
+    right: 50px;
+    top: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 1000ms, box-shadow 1000ms;
+}
+.theme .slider {
+    width: 60px;
+    height: 30px;
+    background-color: rgb(20,20,20);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 0;
+    user-select: none;
+    transition: margin-left 500ms ease-out, background 1000ms;
+}
+.font {
+    position: absolute;
+    height: 50px;
+    width: 150px;
+    top: 0px;
+    right: 180px;
+    line-height: 50px;
+    text-align: center;
+}
+.font p {
+    color: white;
+    font-size: 18px;
+}
+.font:hover {
+    background-color: rgb(60,60,60);
+}
+.font:hover > .font-drop {
+    display: block;
+}
+.font ul {
+    display: none;
+    overflow: hidden;
+    padding: 14px 0;
+    background-color: rgb(100,100,100);
+    width: 100%;
+    list-style: none;
+}
+.font ul li {
+    padding: 4px 0;
+    cursor: pointer;
+    line-height: normal;
+}
+.font ul li:hover {
+    background-color: rgb(70,70,70);
+    
+}
+.new {
+    position: absolute;
+    right: 50px;
+    bottom: 180px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgb(100,100,100);
+    color: rgb(50,50,50);
+    font-size: 50px;
+    line-height: 52px;
+    text-align: center;
+    font-family: Arial !important;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgb(60,60,60);
+    cursor: pointer;
+    user-select: none;
+    transition: background 300ms, color 300ms, box-shadow 500ms;
+}
+.new:hover {
+    background-color: rgb(80,80,80);
+    color: rgb(150,150,150);
+    box-shadow: 0 0 30px rgb(50,50,50);
+}
+.clearAnim {
+    position: absolute;
+    right: 50px;
+    bottom: 180px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    border-radius: 25px;
+    background-color: rgba(255,255,255,0.1);
+    pointer-events: none;
+    animation-name: clear-Anim;
+    animation-duration: 1500ms;
+    animation-play-state: paused;
+}
+@keyframes clear-Anim {
+    0% {transform: scale(1);opacity:1}
+    100% {transform: scale(90);opacity:0;}
+}
+/* transition */
+* {
+    transition: color 1000ms;
+}
+body, .header, .notes_points, .notes_body, .notes_summary {
+    transition: background 1000ms;
+}
